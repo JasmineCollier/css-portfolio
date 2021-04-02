@@ -1,0 +1,102 @@
+.container {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+   grid-template-areas: 
+  "sidebar hero hero"
+  "sidebar casestudy1 casestudy2" 
+  "sidebar casestudy3 casestudy3"
+  "sidebar aboutme image"
+  "sidebar resume resume"
+  "sidebar footer footer";
+  grid-gap: 0.8rem;
+  
+}
+h1 {font-size: 600%;
+  color: #012b55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+h4 {
+  font-size: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 175px;
+  padding-right: 175px;
+  
+
+}
+
+#hero {
+  background-color: #CDAE8F;
+  align-items: flex-end;
+  grid-area: hero;
+  justify-content: center; 
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+#sidebar{
+  color: #012b55;
+   grid-area: sidebar;
+   font-family: 'Roboto', sans-serif;
+}
+
+#casestudy1{
+  grid-area: casestudy1;
+  font-family: 'Roboto', sans-serif;
+
+}
+#casestudy2{
+  grid-area: casestudy2;
+  font-family: 'Roboto', sans-serif;
+  padding-right: 50px;
+}
+#casestudy3{
+  grid-area: casestudy3;
+  font-family: 'Roboto', sans-serif;
+  }
+#aboutme{
+  grid-area: aboutme;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  padding-right: 100px;
+}
+
+#resume{
+  grid-area: resume;
+  font-family: 'Roboto', sans-serif;
+}
+
+#footer{
+  color: #012b55;
+  grid-area: footer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "aboutme aboutme aboutme image";
+  margin-bottom: 1em;
+  grid-gap: 0.8rem;
+}
+
+@media only screen and (max-width:550px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr  1fr;
+    grid-template-areas: 
+    "hero"
+    "casestudy1"
+    "casestudy2"
+    "casestudy3"
+    "aboutme"
+    "resume"
+    "footer";
+  }
+}
